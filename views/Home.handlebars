@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-color: #000000;
+  text-align: center;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.topo .mysite {
+  text-align: left;
+  flex: 1;
+}
+
+.topo .mysite .logo {
+  width: 20%;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.topo .contatos {
+  flex: 1;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(34, 8, 179);
+  margin: 2px 2px;
+  margin-left: 8px;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.gameuniverse{
+  margin-top: 50px;
+
+}
+
+.topo a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #13131c;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+}
+
+.sobre {
+  text-align: center;
+  background-color: #8b8b89;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  color: #000000;
+  margin-top: 100px;
+}
+
+.beneficios-custos-experiencia {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  height: 300px;
+  color: #fff;
+  margin-top: 5%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.beneficios,
+.custos,
+.experiencia {
+  margin-top: 10%;
+  flex: 1;
+  background-color: rgb(34, 8, 179);
+  margin: 0 10px;
+  padding: 20px;
+  border-radius: 40px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+</style>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+ <!-- <link rel="stylesheet" type="text/css" href="Home.css">!-->
+  
+</head>
+
+<body>
+  <header>
+    <div class="topo">
+      <div class="contatos">
+        <a href="Login.handlebars"> <button>Login</button></a>
+        <a href="Cadastro.handlebars"><button>Cadastro</button></a>
+        <a href="Catalogos.handlebars"><button>Catálogos</button></a>
+        <a href="Jogos.handlebars"><button>Assinaturas</button></a>
+      </div>
+    </div>
+  </header>
+  <form action="/Catalogos" method="POST"></form>
+  <div class="logo">
+    <img src="img/logo.jpg" alt="#">
+  </div>
+  <div class="sobre">
+    <h2>Sobre nós</h2><br>
+    <h3>A "Game Universe" é uma empresa apaixonada por criar experiências de jogos únicas e inovadoras.
+       Fundada em [2023], 
+       nossa missão é oferecer entretenimento de alta qualidade que transcenda as expectativas dos jogadores. 
+       Com uma equipe dedicada de desenvolvedores, designers e entusiastas de jogos,
+       estamos comprometidos em colaborar com a indústria de jogos para novos patamares.
+    </h3>
+  </div>
+  <div class="missao-visao-valores">
+    <div class="sobre">
+      <h2>Missão</h2><br>
+      <h3>A nossa missão é proporcionar uma experiência de entretenimento única,
+       conectando jogadores de todo o mundo por meio de uma plataforma de jogos online. Buscamos inspirar diversão, camaradagem e competição saudável,
+       oferecendo acesso a uma ampla variedade de jogos excepcionais e inovadores.
+      </h3>
+    </div>
+    <div class="sobre">
+      <h2>Visão</h2><br>
+      <h3>Um futuro onde a nossa plataforma seja reconhecida como o destino preferido para 
+        jogadores de todas as idades e níveis de habilidade. Queremos criar um espaço virtual envolvente e 
+        inclusivo, impulsionado por tecnologia de ponta, 
+        onde a paixão pelos jogos une comunidades e transcende fronteira
+      </h3>
+    </div>
+    </div>
+
+    <div class="sobre">
+      <h2>Valores</h2><br>
+      <h3>Na nossa plataforma, valorizamos a diversidade, 
+        promovemos a inovação constante e operamos com integridade e ética. 
+        Fortalecemos nossa comunidade, incentivando amizades duradouras, e 
+        compartilhamos uma paixão inabalável pelos jogos. Buscamos não apenas ser 
+        líderes, mas um ponto de encontro para conexão, competição e memórias inesquecíveis.
+      </h3>
+    </div>
+  <div class="centered">
+    <a href="Jogos.handlebars"> <button class="botao-curso">Conheça nossos Jogos!</button></a>
+  </div>
+
+
+</body>
+
+</html>

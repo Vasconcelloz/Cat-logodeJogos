@@ -1,0 +1,28 @@
+.confirmacao {
+    text-align: center;
+    padding: 20px;
+}
+
+.confirmacao h2 {
+    font-size: 24px;
+    color:#fff;
+}
+
+.confirmacao p {
+    color: #fff;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+}
+img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px; 
+            height: auto;
+            margin: 10px;
+        }

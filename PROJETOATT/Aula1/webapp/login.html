@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plano Jogos</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h1>Venha conhecer os melhores planos de jogos do mundo gamer!</h1>
+            <img src="img/logo.jpg" class="image" alt="Aventureira">
+        </div>
+        <div class="right">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <form id="loginForm">
+                    <div class="text-card">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Usuário" id="usuario">
+                    </div>
+                    <div class="text-card">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha" id="senha">
+                    </div>
+                    
+                    <button type="button" class="btn-login" onclick="validarLogin()">Login</button>
+                    <a href="telaCadastro.jsp">Cadastre-se</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validarLogin() {
+            // Obter os valores dos campos de entrada
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            // Lógica de validação (pode ser mais elaborada)
+            if (usuario === "bruno" && senha === "123") {
+                alert("Login bem-sucedido!");
+                // Redirecionar para a página de catálogo em caso de sucesso
+                window.location.href = "jogos.html";
+            } else {
+                // Redirecionar para a página de erro de login em caso de falha
+                window.location.href = "ErroLogin.html";
+            }
+        }
+    </script>
+
+    <div class="modal" tabindex="-1" id="modal">
+        <!-- O conteúdo do modal não está sendo usado na página de login -->
+    </div>
+</body>
+</html>

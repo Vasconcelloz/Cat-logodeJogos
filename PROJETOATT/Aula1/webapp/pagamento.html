@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Assinatura de Jogos</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="pagamento.css">
+  
+</head>
+<body>
+    <header>
+        <header>
+            <img src="img/logo.jpg" alt="Meu Logotipo">
+    
+            <header>
+                <div class="topo">
+                  <div class="contatos">
+                    <a href="login.html"> <button>Login</button></a>
+                    <a href="telaCadastro.html"><button>Cadastro</button></a>
+                    <a href="jogos.html"><button>Catálogos</button></a>
+                    <a href="planos.html"><button>Assinaturas</button></a>
+                  </div>
+                </div>
+              </header>
+
+    <section class="pagamento">
+        <h2>Informações de Pagamento</h2>
+        <form action="confirmacao.html" method="post">
+            <label for="nome_cartao">Nome no Cartão:</label>
+            <input type="text" id="nome_cartao" name="nome_cartao" required>
+            <label for="numero_cartao">Número do Cartão:</label>
+            <input type="text" id="numero_cartao" name="numero_cartao" required>
+            <label for="data_validade">Data de Validade:</label>
+            <input type="text" id="data_validade" name="data_validade" placeholder="MM/AA" required>
+            <label for="codigo_seguranca">Código de Segurança:</label>
+            <input type="text" id="codigo_seguranca" name="codigo_seguranca" required>
+            <button href="confirmacao.htmls" type="submit">Pagar Agora</button>
+            
+        </form>
+    </section>
+
+    <footer>
+        <div id="faleConosco">
+            Fale Conosco
+        </div>
+        <p>&copy; 2023 Assinatura de Jogos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

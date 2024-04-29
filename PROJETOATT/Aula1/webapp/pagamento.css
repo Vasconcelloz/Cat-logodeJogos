@@ -1,0 +1,52 @@
+.pagamento {
+color: #fff;
+text-align: center;
+padding: 20px;
+}
+
+.pagamento form {
+max-width: 300px;
+margin: 0 auto;
+}
+
+.pagamento label {
+display: block;
+margin-top: 10px;
+}
+
+.pagamento input {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.pagamento button {
+background-color: rgb(4, 0, 255);
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+.pagamento button:hover {
+background-color: #f90;
+}
+footer {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: rgb(0, 0, 0); 
+}
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; 
+    height: auto;
+    margin: 10px;
+}

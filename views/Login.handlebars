@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Plano Jogos</title>
+   <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #12111f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left > h1{
+    font-size: 3vw;
+    color: #f0ffffde;
+    text-align: center;
+    font-style: italic;
+    padding-left: 2%;
+    width: 600px;
+    height: 100px;
+    font-size: 40px;
+    
+}
+
+.image{
+    width: 600px;
+    height: 300px;
+    margin: 5%;
+    margin-bottom:12%;
+    margin-left: 15%;
+
+}
+
+.right{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: blue;
+    font-weight: 700;
+    margin: 0;
+}
+
+.text-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.text-card > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 14pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.text-card > label{
+    color:#f0ffffde;
+    margin-bottom: 10px;
+}
+
+.text-card > input ::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width:85%;
+    padding: 16px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px rgb(255, 255, 255);
+    margin-right: auto;
+}
+    </style>
+ <!--<script>
+    function login() {
+        let usu = form.elements['usuario'].value;
+        let senha = form.elements['senha'].value;
+
+        if (usu === "julia@gmail.com" && senha === "123") {
+            alert("Login bem-sucedido!");
+            // Redirecionar para a página home.handlebars após o login bem-sucedido
+            window.location.href = "Home.handlebars";
+        } else {
+            // Lógica para credenciais inválidas se necessário
+        }
+    }
+</script>!-->
+ <script>
+        function login() {
+            // Obter referência ao formulário usando o ID
+            let form = document.getElementById('loginForm');
+
+            // Obter valores dos campos de entrada usando o nome do campo
+            let usu = form.elements['usuario'].value;
+            let senha = form.elements['senha'].value;
+
+            // Realizar a requisição POST para validar o login
+            fetch('http://localhost:8087/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ usuario: usu, senha: senha }),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Redirecionar para a página home.handlebars após o login bem-sucedido
+                        window.location.href = "Home.handlebars";
+                    } else {
+                         // Redirecionar para a página de loginerro em caso de login inválido
+                window.location.href = "/Loginerro";
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro na requisição:', error);
+                });
+        }
+    </script>
+
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h1>Venha conhecer os melhores planos de jogos do mundo gamer!</h1>
+            <img src="img/logo.jpg" class="image" alt="Aventureira">
+        </div>
+        <div class="right">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <form id="/Home" method="POST">
+                    <div class="text-card">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Usuário" id="usuario">
+                    </div>
+                    <div class="text-card">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha" id="senha">
+                    </div>
+                    
+                    <!--<button type="submit" class="btn-login" action="jogos.html">Login</button>-->
+                    <button class="btn-login" onclick="login()">Login  </button>
+                    <a href="telaCadastro.html">Cadastre-se</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal">
+        <!-- O conteúdo do modal não está sendo usado na página de login -->
+    </div>
+</body>
+</html>

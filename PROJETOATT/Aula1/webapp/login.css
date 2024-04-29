@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #12111f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left > h1{
+    font-size: 3vw;
+    color: #f0ffffde;
+    text-align: center;
+    font-style: italic;
+    padding-left: 2%;
+    width: 600px;
+    height: 100px;
+    font-size: 40px;
+    
+}
+
+.image{
+    width: 600px;
+    height: 300px;
+    margin: 5%;
+    margin-bottom:12%;
+    margin-left: 15%;
+
+}
+
+.right{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: blue;
+    font-weight: 700;
+    margin: 0;
+}
+
+.text-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.text-card > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 14pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.text-card > label{
+    color:#f0ffffde;
+    margin-bottom: 10px;
+}
+
+.text-card > input ::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width:85%;
+    padding: 16px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px rgb(255, 255, 255);
+    margin-right: auto;
+}
